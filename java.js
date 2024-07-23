@@ -1,7 +1,7 @@
 function button1(){
 var input = document.getElementById("inputfieldjs").value; 
 
-  var urlRegex = /(https?:\/\/[^\s]+)/g; 
+  var urlRegex = /(https?:\/\/[^\s]+)/g; //
 
   
 
