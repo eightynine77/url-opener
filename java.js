@@ -1,54 +1,43 @@
-function button1(){
-var input = document.getElementById("inputfieldjs").value; 
-
-  var urlRegex = /(https?:\/\/[^\s]+)/g; //
-
-  
-
-  var matches = input.match(urlRegex); 
-
-  
-
-  if (matches) {
-
-    for (var i = 0; i < matches.length; i++) {
-
-      window.open(matches[i], '_blank');
-
+function button1() {
+  var input = document.getElementById("inputfieldjs").value;
+  var links = input.split(/\r?\n/); 
+  for (var i = 0; i < links.length; i++) {
+    var trimmedLink = links[i].trim();
+    if (trimmedLink) {
+      if (!trimmedLink.match(/(https?:\/\/)/)) {
+        trimmedLink = "https://" + trimmedLink; 
+      }
+      window.open(trimmedLink, '_blank');
     }
-
-  } else {
-
-    window.open("https://" + input, '_blank')
-
   }
-}
+} 
 
-//=================================
+function isMobileDevice() {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   let textarea = document.getElementById('inputfieldjs');
 
   if (textarea) {
     textarea.addEventListener('keydown', (e) => {
-      if (e.keyCode === 13 && !e.shiftKey) {
-        e.preventDefault(); // Prevent the default behavior of the Enter key
-        var input22 = textarea.value.trim();
-        var urlRegex22 = /(https?:\/\/[^\s]+)/g;
-        var matches22 = input22.match(urlRegex22);
-        if (matches22) {
-          for (var i = 0; i < matches22.length; i++) {
-            window.open(matches22[i], '_blank');
-          }
-        } else {
-          window.open("https://" + input22, '_blank');
-        }
+      if (e.keyCode === 13 && !e.shiftKey && !isMobileDevice()) { 
+        e.preventDefault(); 
+        button1();
       }
     });
   }
 });
 
-//==========================================
+if (isMobileDevice()) {
+  //this javascript file is courtesy of chatgpt (chatgpt.com) and google's gemini AI (gemini.google.com) 
+  
+  //;) 
+}
+
+function clearthetext(){
+    document.getElementById('inputfieldjs').value = ''
+}
 
 function pastetext() {
     var textarea = document.querySelector('textarea');
@@ -59,10 +48,4 @@ function pastetext() {
         .catch(err => {
             prompt("looks like we have encountered an error\nplease copy and search the error below", err)
         });
-}
-
-//=================================
-
-function clearthetext(){
-    document.getElementById('inputfieldjs').value = ''
 }
