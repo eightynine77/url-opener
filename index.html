@@ -6,7 +6,18 @@
   <script defer src="java.js"></script>
   <link rel="icon" type="image/x-icon" href="Untitled17.png">
   <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#c90000">
   <title>url opener</title>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(reg => console.log('Service Worker registered', reg))
+          .catch(err => console.error('Service Worker registration failed', err));
+      });
+    }
+  </script>
 </head>
 <body>
   <div class="titlebox" style="overflow:auto">
