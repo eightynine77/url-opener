@@ -2,14 +2,15 @@ self.addEventListener('install', (e) => {
   console.log('[Service Worker] Install');
   e.waitUntil(
     caches.open('url-opener-cache').then((cache) => {
-      return cache.addAll([
-        '/',
-        '/index.html',
-        '/style.css',
-        '/java.js',
-        '/manifest.json',
-        '/Untitled17.png'
-      ]);
+      const base = location.origin + location.pathname;
+return cache.addAll([
+  base,
+  base + 'index.html',
+  base + 'style.css',
+  base + 'java.js',
+  base + 'manifest.json',
+  base + 'Untitled17.png'
+]);
     })
   );
 });

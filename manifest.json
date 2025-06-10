@@ -1,19 +1,20 @@
 {
   "name": "URL Opener",
   "short_name": "URL Opener",
-  "start_url": ".",
+  "start_url": "/url-opener/",
+  "scope": "/url-opener/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#c90000",
   "description": "open a URL with your desired app",
   "icons": [
     {
-      "src": "Untitled17.png",
+      "src": "/url-opener/Untitled17.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "Untitled17.png",
+      "src": "/url-opener/Untitled17.png",
       "sizes": "512x512",
       "type": "image/png"
     }
