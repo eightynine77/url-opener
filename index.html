@@ -11,12 +11,12 @@
   <title>url opener</title>
   <script>
     if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service_worker.js')
-          .then(reg => alert('Service Worker registered', reg))
-          .catch(err => alert('Service Worker registration failed', err));
-      });
-    }
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service_worker.js')
+      .then(reg => alert('Service Worker registered:\n' + JSON.stringify(reg)))
+      .catch(err => alert('Service Worker registration failed:\n' + err));
+  });
+}
   </script>
 </head>
 <body>
