@@ -14,7 +14,6 @@
   window.addEventListener('load', () => {
     const swPath = location.pathname + 'service_worker.js';
     navigator.serviceWorker.register(swPath)
-      .then(() => alert('Service Worker registered successfully!'))
       .catch(err => alert('Service Worker registration failed:\n' + err));
   });
 }
