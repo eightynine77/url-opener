@@ -1,123 +1,107 @@
-* {
-  box-sizing: border-box;
+body {
   margin: 0;
-  padding: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: #000;
+  color: white;
 }
 
-body {
-  background-color: black;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  color: white;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+.title {
+  font-size: 4rem;
+  margin: 0;
 }
 
 .titlebox {
-  background-color: black;
-  padding: 20px;
+  background-color: #000;
+  padding: 20px 0;
   text-align: center;
-}
-
-.title {
-  font-size: 64px;
-  font-weight: bold;
 }
 
 .inputbox {
   background-color: #c90000;
-  padding: 16px;
-  margin-top: 36px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  max-width: 700px;
+  border-radius: 10px;
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  border-radius: 8px;
-  width: fit-content;
-  max-width: 100%;
+  gap: 1rem;
 }
 
 .inputfield {
   width: 100%;
-  min-width: 280px;
-  height: 200px;
-  font-size: 16px;
-  padding: 10px;
+  height: 270px;
   resize: none;
+  font-size: 1.5rem;
+  padding: 0.5rem;
   border: none;
-  margin-bottom: 10px;
+  border-radius: 6px;
+  box-sizing: border-box;
 }
 
 .button {
   background-color: black;
   color: white;
   border: none;
-  font-size: 24px;
-  padding: 10px 20px;
-  align-self: flex-end;
-  margin-bottom: 10px;
+  font-size: 2.1rem;
+  padding: 0.8rem;
+  width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-.cleartext,
-.pastetext {
-  color: white;
-  font-size: 16px;
-  text-decoration: underline;
-  margin-right: 10px;
-}
-
-.linkrow {
+.linkbox {
   display: flex;
-  gap: 10px;
-  margin-top: auto;
+  justify-content: space-between;
 }
 
-@media screen and (max-width: 768px) {
-  .title {
-    font-size: 48px;
-  }
+.link {
+  color: white;
+  font-size: 2rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
 
-  .inputbox {
-    width: 100%;
+@media (max-width: 768px) {
+  .title {
+    font-size: 3rem;
   }
 
   .inputfield {
-    font-size: 18px;
+    height: 270px;
+    font-size: 1rem;
   }
 
   .button {
-    font-size: 20px;
-    padding: 8px 16px;
+    font-size: 2.1rem;
+    padding: 0.6rem;
   }
 
-  .cleartext,
-  .pastetext {
-    font-size: 14px;
+  .link {
+    font-size: 1.8rem;
   }
 }
 
-@media screen and (orientation: landscape) and (max-height: 480px) {
-  .title {
-    font-size: 36px;
-  }
-
+@media (orientation: landscape) and (max-height: 500px) {
   .inputbox {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 0.5rem;
   }
 
   .inputfield {
-    width: calc(100% - 120px);
-    height: 120px;
+    flex: 2;
+    height: 200px;
   }
 
   .button {
-    height: 120px;
+    flex: 1;
+    height: 100px;
   }
 
-  .linkrow {
-    width: 100%;
-    justify-content: flex-start;
+  .linkbox {
+    flex-basis: 100%;
+    justify-content: space-around;
   }
 }
