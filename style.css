@@ -1,196 +1,106 @@
-.title{
-    color: white;
-    font-size: 64px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+body {
+  margin: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: #000;
+  color: white;
 }
 
-.titlebox{
-    background-color: black;
+.titlebox {
+  background-color: #000;
+  padding: 20px 0;
+  text-align: center;
 }
 
-.inputbox{
-    background-color: rgb(201, 0, 0);
-    width: 640px;
-    margin: auto;
-    height: 300px;
-    position: relative;
-    top: 36px;
+.title {
+  font-size: 3rem;
+  margin: 0;
 }
 
-.button{
-    background-color: black;
-    color: white;
-    border: none;
-    font-size: 34px;
-    width: 100px;
-    height: 85px;
-    position: absolute;
-    top: 11px;
-    left: 530px;
+.inputbox {
+  background-color: #c90000;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  max-width: 700px;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.inputfield{
-    border: none;
-    width: 513px;
-    height: 247px;
-    position: absolute;
-resize: none;
-    top: 11px;
-    left: 11px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 16px;
+.inputfield {
+  width: 100%;
+  height: 150px;
+  resize: none;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  box-sizing: border-box;
 }
 
-.cleartext{
-    color: white;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    position: absolute;
-    top: 259px;
-    left: 11px;
-    font-size: 30px;
+.button {
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.8rem;
+  width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-.pastetext{
-    color: white;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    position: absolute;
-    top: 259px;
-    left: 180px;
-    font-size: 30px;
+.linkbox {
+  display: flex;
+  justify-content: space-between;
 }
 
-
-/*============================================================================*/
-/* For Mobile Portrait View */
-/*============================================================================*/
-@media screen and (max-device-width: 1080px)
-	and (orientation: portrait) {
-	.title{
-    color: white;
-    font-size: 64px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.link {
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
-.titlebox{
-    background-color: black;
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .inputfield {
+    height: 120px;
+    font-size: 1rem;
+  }
+
+  .button {
+    font-size: 1.2rem;
+    padding: 0.6rem;
+  }
+
+  .link {
+    font-size: 1rem;
+  }
 }
 
-.button{
-    background-color: black;
-    color: white;
-    border: none;
-    font-size: 34px;
-    width: 100px;
-    height: 85px;
-    position: absolute;
-    top: 173px;
-    left: 248px;
-}
+@media (orientation: landscape) and (max-height: 500px) {
+  .inputbox {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
 
-.inputbox{
-    background-color: rgb(201, 0, 0);
-    width: 360px;
-    margin: auto;
-    height: 300px;
-    position: relative;
-    top: 36px;
-}
+  .inputfield {
+    flex: 2;
+    height: 100px;
+  }
 
-.inputfield{
-    border: none;
-    width: 230px;
-    height: 247px;
-    position: absolute;
-resize: none;
-    top: 11px;
-    left: 11px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 30px;
-}
+  .button {
+    flex: 1;
+    height: 100px;
+  }
 
-.cleartext{
-    color: white;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    position: absolute;
-    top: 259px;
-    left: 11px;
-    font-size: 30px;
-}
-
-.pastetext{
-    color: white;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    position: absolute;
-    top: 259px;
-    left: 180;
-    font-size: 30px;
-}
-}
-
-
-/*============================================================================*/
-/* For Mobile Landscape View */
-/*============================================================================*/
-@media screen and (max-device-width: 2408px)
-	and (orientation: landscape) {
-	.title{
-    color: white;
-    font-size: 64px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.titlebox{
-    background-color: black;
-}
-
-.inputbox{
-    background-color: rgb(201, 0, 0);
-    width: 640px;
-    margin: auto;
-    height: 300px;
-    position: relative;
-    top: 36px;
-}
-
-.button{
-    background-color: black;
-    color: white;
-    border: none;
-    font-size: 34px;
-    width: 100px;
-    height: 85px;
-    position: absolute;
-    top: 11px;
-    left: 530px;
-}
-
-.inputfield{
-    border: none;
-    width: 513px;
-    height: 247px;
-    position: absolute;
-resize: none;
-    top: 11px;
-    left: 11px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 30px;
-}
-
-.cleartext{
-    color: white;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    position: absolute;
-    top: 259px;
-    left: 11px;
-    font-size: 30px;
-}
-
-.pastetext{
-    color: white;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    position: absolute;
-    top: 259px;
-    left: 180;
-    font-size: 30px;
-}
+  .linkbox {
+    flex-basis: 100%;
+    justify-content: space-around;
+  }
 }
