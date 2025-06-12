@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -20,16 +21,20 @@
   </script>
 </head>
 <body>
-  <div class="titlebox" style="overflow:auto">
-    <h1 class="title">url opener</h1>
-  </div>
-  <div class="inputbox" style="overflow:auto">
-    <textarea type="text" id="inputfieldjs" class="inputfield"></textarea>
-    <button onclick="button1()" class="button">open link</button>
-    <div class="linkbox">
-      <a href="javascript:clearthetext()" class="link">clear text</a>
-      <a href="javascript:pastetext()" class="link">paste text</a>
+
+  <header class="titlebox">
+        <h1 class="title">URL Opener</h1>
+  </header>
+  
+  <main class="inputbox">
+    <div class="main-controls">
+      <textarea id="inputfieldjs" class="inputfield" placeholder="Paste URLs here..."></textarea>
+      <button onclick="button1()" class="button">Open Link</button>
     </div>
-  </div>
+      <div class="sub-controls">
+        <a href="javascript:pastetext()" class="control-link">Paste Text</a>
+        <a href="javascript:clearthetext()" class="control-link">Clear Text</a>
+      </div>
+  </main>
 </body>
 </html>
